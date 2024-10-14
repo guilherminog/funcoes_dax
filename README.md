@@ -1,6 +1,3 @@
-## DAX mais utilizados 
-
-
 | Categoria       | Fórmula (Inglês) | Equivalente (Português) | Sintaxe                                      | Exemplo                                           | Descrição                                                                                             |
 |-----------------|------------------|-------------------------|----------------------------------------------|---------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | Agregação       | SUM              | SOMA                    | `=SUM(Coluna)`                               | `=SUM(BaseFuncionarios[VT])`                      | Soma números ou colunas                                                                                |
@@ -16,7 +13,7 @@
 |                 | MAXX             | MÁXIMOX                 | `=MAXX(Tabela;Expressão)`                    | `=MAXX(BaseFuncionarios;[VT]+[VR]+[Beneficios])`  | Calcula o maior valor do resultado de uma expressão                                                    |
 |                 | MINX             | MÍNIMOX                 | `=MINX(Tabela;Expressão)`                    | `=MINX(BaseFuncionarios;[VT]+[VR]+[Beneficios])`  | Calcula o menor valor do resultado de uma expressão                                                    |
 |                 | COUNTX           | CONT.NÚMX               | `=COUNTX(Tabela;Expressão)`                  | `=COUNTX(BaseFuncionarios;[VT]+[VR]+[Beneficios])`| Conta quantos números tem no resultado de uma expressão                                                |
-| Agregação       | MEDIAN           | MEDIANA                 | `=MEDIAN(Coluna)`                            | `=MEDIAN(BaseFuncionarios[Salario])`              | Retorna a mediana dos números em uma coluna                                                            |
+|                 | MEDIAN           | MEDIANA                 | `=MEDIAN(Coluna)`                            | `=MEDIAN(BaseFuncionarios[Salario])`              | Retorna a mediana dos números em uma coluna                                                            |
 |                 | STDEV.P          | DESVPAD.P               | `=STDEV.P(Coluna)`                           | `=STDEV.P(BaseFuncionarios[Salario])`             | Calcula o desvio padrão da população para os números fornecidos                                        |
 |                 | STDEV.S          | DESVPAD.S               | `=STDEV.S(Coluna)`                           | `=STDEV.S(BaseFuncionarios[Salario])`             | Calcula o desvio padrão da amostra para os números fornecidos                                          |
 |                 | VAR.P            | VAR.P                   | `=VAR.P(Coluna)`                             | `=VAR.P(BaseFuncionarios[Salario])`               | Calcula a variância da população para os números fornecidos                                            |
@@ -31,9 +28,6 @@
 |                 | VALUES           | VALORES                 | `=VALUES(Coluna)`                            | `=VALUES(BaseFuncionarios[Cargo])`                | Retorna valores distintos de uma coluna                                                                |
 |                 | RELATED          | RELACIONADO             | `=RELATED(ColunaRelacionada)`                | `=RELATED(BaseDepartamento[NomeDepartamento])`     | Retorna valores de uma tabela relacionada a partir de uma relação definida                             |
 |                 | EARLIER          | MAIS CEDO               | `=EARLIER(Coluna; [Nível])`                  | `=EARLIER(BaseFuncionarios[Salario])`             | Refere-se a uma linha anterior no contexto da linha atual                                              |
-
-
-
 | Informações     | LOOKUPVALUE      | VALORPROCURAR           | `=LOOKUPVALUE(Tabela[ColunaRetorno];Tabela[ColunaBusca];ValorBusca)` | `=LOOKUPVALUE(BaseFuncionarios[Nome];BaseFuncionarios[ID];123)` | Retorna um valor a partir de uma coluna com base em outra coluna da mesma tabela                       |
 |                 | HASONEVALUE      | TEMUMVALOR              | `=HASONEVALUE(Coluna)`                       | `=HASONEVALUE(BaseFuncionarios[Cargo])`           | Retorna VERDADEIRO se houver exatamente um valor na coluna                                             |
 |                 | CONTAINS         | CONTÉM                  | `=CONTAINS(Tabela;Coluna;Valor)`             | `=CONTAINS(BaseFuncionarios;BaseFuncionarios[Nome];"Carlos")` | Verifica se a tabela contém uma linha com o valor especificado                                         |
@@ -75,7 +69,7 @@
 |                 | WEEKNUM          | NÚMSEMANA               | `=WEEKNUM(Coluna1;[Tipo])`                   | `=WEEKNUM(BaseCalendario[Data])`                  | Retorna a semana do ano de uma data (número de 1 a 52)                                                 |
 |                 | HOUR             | HORA                    | `=HOUR(Coluna1)`                              | `=HOUR(BaseCalendario[Data])`                     | Retorna a hora de uma data com horário                                                                 |
 |                 | MINUTE           | MINUTO                  | `=MINUTE(Coluna1)`                            | `=MINUTE(BaseCalendario[Data])`                   | Retorna os minutos de uma data com horário                                                             |
-|                 | SECOND           | SEGUNDO 
+|                 | SECOND           | SEGUNDO                 | `=SECOND(Coluna1)`                            | `=SECOND(BaseCalendario[Data])`                   | Retorna os segundos de uma data com horário                                                            |
 | Time Intelligence | DATEADD        | DATA.ADD                | `=DATEADD(ColunaData; Intervalo; Unidade)`   | `=DATEADD(BaseCalendario[Data];-1;YEAR)`           | Desloca a data para frente ou para trás no tempo                                                       |
 |                 | SAMEPERIODLASTYEAR | MES.PERÍODO.ANO.PASSADO | `=SAMEPERIODLASTYEAR(ColunaData)`           | `=SAMEPERIODLASTYEAR(BaseCalendario[Data])`        | Retorna as datas do mesmo período do ano passado                                                       |
 |                 | TOTALYTD         | TOTAL.ACUM.ANUAL        | `=TOTALYTD(Expressão; ColunaData)`           | `=TOTALYTD(SUM(BaseVendas[Receita]);BaseCalendario[Data])` | Calcula o total acumulado até a data atual no ano fiscal                                               |
